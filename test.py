@@ -1,8 +1,16 @@
-from pymongo import MongoClient
-con = MongoClient('localhost',port=27017)
-db = con['Practice_DB']
-coll = db['Employee_Coll']
-documents = coll.find({'$and':[{'esal':{'$gt':2000}},{'esal':{'$lt':5000}}]})
-for doc in documents:
-	print(doc)
-	print('-'*80)
+# Input a3b5
+# Ouput aaabbbbb
+
+s = input('Enter String:')
+ouput = ''
+ouput2 = ''
+for x in s:
+	if x.isalpha():
+		ouput = ouput+x
+		ouput2 = ouput2+x
+		target = x
+	else:
+		ouput = ouput + target*(int(x)-1)
+		ouput2 = ouput2 + chr(ord(target)+ int(x))
+print(ouput)
+print(ouput2)

@@ -26,3 +26,15 @@ for db in db_list:
 	print(n,':',db)
 	n=n+1
 client.close()
+
+print('#'*95)
+print('All MySQL Database')
+from pymysql import connect
+con = connect(host='localhost',user='root',port=3306,password='1234',database='durgadb')
+cursor = con.cursor()
+cursor.execute('show databases')
+db_list = cursor.fetchall()
+i=1
+for db in db_list:
+	print(f'{i} : {db[0]}')
+	i+=1
