@@ -3,7 +3,7 @@
 # pip install pymongo
 import pymongo
 
-client = pymongo.MongoClient()
+client = pymongo.MongoClient(host='127.0.0.1', port=27017, password='')
 db_list = client.list_database_names()
 print('The Available Database Name:')
 print('*'*40)

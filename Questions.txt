@@ -1,0 +1,181 @@
+# array :
+# write a program to add 1 to 100, even number 
+# from functools import reduce
+# l = [x for x in range(1,101) if x%2==0]
+# frist Method
+# result = reduce(lambda a,b: a+b, l)
+# print(f'The Sum: {result}')
+# Second Method
+# result = 0
+# for i in l:
+# 	result = result + i
+# print(f'The Result {result}')
+
+
+#sum of n natural number
+# s = int(input('Enter number:')) 
+# sum = 0
+# for i in range(1, s+1):
+# 	sum = sum + i
+# print(f'The sum of {s} natural Number is {sum}')
+
+# Reverse String:
+# s = input('Etner String:')
+# r_string = ''
+# for i in range(len(s)-1, -1, -1):
+# 	r_string = r_string + s[i]
+# print(r_string)
+
+# find object from list which is on even index:
+# l = eval(input('Enter List:'))
+# # first Way
+# dl = []
+# for i in range(len(l)):
+# 	if i%2 != 0:
+# 		dl.append(l[i])
+# print(dl)
+# # Second Way
+# dl = l[::2]
+
+# program for perfect number:
+# s = int(input('Enter string:'))
+# def perfect_number(s):
+# 	sum = 0
+# 	for i in range(1,s):
+# 		if s%i == 0:
+# 			sum = sum + i
+
+# 	if  s== sum:
+# 		print(f'{s} is perfect number')
+# 	else:
+# 		print(f'{s} is not perfect number')
+
+# perfect_number(s)
+
+
+
+# biggest number taken as numerator 
+
+# def decor(fun):
+# 	def inner(a,b):
+# 		if a > b:
+# 			print(f'{a} is bigger number, thats why i take {a} as numerator')
+# 			print(f'The Divid: {b/a}')
+# 		else:
+# 			return fun(a,b)
+# 	return inner
+# @decor
+# def divde_number(a,b):
+# 	print(f'The divide: {a/b}')
+
+# a = int(input('Enter a:'))
+# b = int(input('Enter b:'))
+# divde_number(a,b)
+
+# Write a program to check weather prime number or not
+# try:
+# 	n = int(input('Enter a Number:'))
+# except ValueError:
+# 	print('plese Enter Digit')
+# else:
+# 	for i in range(2, n):
+# 		if n%i == 0:
+# 			print(f'{n} is not prime number')
+# 			break
+# 	else:
+# 		print(f'{n} is prime number')
+
+# crate a list sqare of even number
+# n = int(input('Etner a Number:'))
+# l = [x**2 if x%2==0 else x**3 for x in range(1,n)]
+# print(l)
+
+# take a string and count number of vowel
+
+# s = input('Etner a String:')
+# vowel = ['a','e','i','o','u']
+# vowel_count = 0
+# number_vowel = {}
+# for i in s:
+# 	if i.lower() in vowel:
+# 		vowel_count = vowel_count + 1
+# 		if i not in number_vowel:
+# 			number_vowel[i] = 1
+# 		else:
+# 			number_vowel[i] += 1
+# print(vowel_count)
+
+# for k,v in number_vowel.items():
+# 	print(f'vowel {k} comes {v} times')
+
+# a = int(input('Enter a:'))
+# b = int(input('Enter b:'))
+
+# a,b = b,a
+
+# print(f'a: {a}')
+# print(f'b: {b}')
+
+# to print n decimal number ot binary, octal, hexadecimal
+# n = int(input('Enter a Number:'))
+# for i in range(0,n+1):
+# 	print(f'{i} in Binary: {bin(i)}')
+# 	print(f'{i} in octal: {oct(i)}')
+# 	print(f'{i} in hexadecimal: {hex(i)}')
+
+# wap to remove voewls from string
+
+# s = input('Etner string:')
+# vowel = ['a','e','i','o','u']
+# remove_vowel_string = ''
+# for i in s:
+# 	if i.lower() not in vowel:
+# 		remove_vowel_string = remove_vowel_string + i
+# print(remove_vowel_string)
+
+# find factorail by using recursion 
+# first Way:
+# def factorial_num(num):
+# 	if num ==0:
+# 		return 1
+# 	else:
+# 		return num * factorial_num(num-1)
+
+# print(factorial_num(5))
+
+# second way:
+# def factorial_number(num):
+# 	if num >=1:
+# 		fac = 1
+# 		for i in range(num, 0, -1):
+# 			fac = fac*i
+# 		print(fac)
+# factorial_number(5)
+
+Q. Write a program to check wheater number is armstrong or not
+n = str(int(input('Enter number:')))
+l = len(n)
+sum = 0
+for i in n:
+	sum += int(i)**l
+
+if int(n) == sum:
+	print(f'{n} is armstrong')
+else:
+	print(f'{n} is not armstrong')
+
+#Write a program to find mid character of string
+s = input('Enter stirng:')
+if len(s)%2 !=0:
+	print(s[int(len(s)/2)])
+
+else:
+	mid1 = s[int(len(s)/2 -1)]
+	mid2 = s[int(len(s)/2  )]
+	print(f'{mid1} and {mid2}')
+
+# Q. TIME CPLEXITY IN LIST
+# Q. reverse vs reversed
+# Q. sorted vs sort
+# Q. Scop in python
+# Q. Slicing and Indexing

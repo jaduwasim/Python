@@ -1,9 +1,6 @@
-from flask import Flask, render_template
-
-app = Flask(__name__)
-@app.route('/home')
-def home():
-	return render_template('home.html')
-
-if __name__ == '__main__':
-	app.run(port=5000, debug=True)
+import copy
+l1 = [1,2,[2.1,2.2,2.3]]
+l2 = copy.deepcopy(l1)
+l1[2][0] = 1.101
+print(l1)
+print(l2)
